@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Terminal, ShieldCheck } from 'lucide-react';
 import Button from './Button';
 import heroImg from './Hero.jpg';
-import resume from './Resume13.pdf';
+import resume from './resume14.pdf';
 
 const Hero: React.FC = () => {
   return (
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-wrap gap-4">
              {/* Swapped positions: View GitHub first, Contact Me second */}
-            <Button variant="outline" href={resume} download="Sriharsha_Meduri_Resume.pdf">Download CV</Button>
+            <Button variant="outline" href={resume} download="SriharshaMeduri_Resume.pdf">Download CV</Button>
             <Button variant="secondary" href="mailto:sriharshameduri07@gmail.com">Contact Me</Button>
           </div>
         </motion.div>

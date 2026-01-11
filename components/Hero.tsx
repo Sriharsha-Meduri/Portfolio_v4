@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Terminal, ShieldCheck } from 'lucide-react';
 import Button from './Button';
 import heroImg from './Hero.jpg';
-import resume from './resume14.pdf';
+import resume from './Resume14.pdf';
 
 const Hero: React.FC = () => {
   return (

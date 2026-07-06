@@ -6,7 +6,7 @@ import { Magnetic, Counter } from './effects';
 import heroImg from './Hero.jpg';
 import resume from './Resume14.pdf';
 
-const PHRASES = ['deepfake radar.', 'vision models.', 'secure systems.', 'real products.'];
+const PHRASES = ['deepfake radars.', 'vision models.', 'secure systems.', 'real products.'];
 
 const Hero: React.FC = () => {
   // typewriter
@@ -39,20 +39,21 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="about" className="w-full max-w-[90%] lg:max-w-[80%] mx-auto px-4 lg:px-0 pt-28 pb-12 md:pt-36 md:pb-20 scroll-mt-10">
+    <section id="about" className="w-full max-w-[90%] lg:max-w-[80%] mx-auto px-4 lg:px-0 pt-24 pb-8 md:pt-36 md:pb-20 scroll-mt-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
 
         {/* Left */}
         <div className="space-y-7">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-zen-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            className="flex flex-wrap items-center gap-2.5">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-zen-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-green-700 dark:text-zen-lime">Open to work</span>
             </span>
-            <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-green-700 dark:text-zen-lime">Open to work</span>
-            <span className="text-zen-black/20 dark:text-white/20">·</span>
-            <span className="font-mono text-[11px] uppercase tracking-wider text-gray-500 dark:text-gray-400">ML Engineer</span>
+            <span className="font-mono text-[11px] font-bold uppercase tracking-wider px-3 py-2 rounded-full border border-zen-black/10 dark:border-white/10 bg-zen-lime/20 text-zen-black dark:text-zen-lime">v2.0</span>
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.05 }}
@@ -66,8 +67,8 @@ const Hero: React.FC = () => {
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed">
-            I'm <strong className="text-zen-black dark:text-white">Sriharsha</strong>, a builder happiest in the gap between a research paper and something people can actually click.
-            Lately that has meant founding a startup, training models, and shipping web apps, occasionally all in the same week. Fueled by curiosity and an unreasonable amount of chai.
+            I'm <strong className="text-zen-black dark:text-white">Sriharsha</strong>, an IT student from Visakhapatnam who got a little too into machine learning.
+            These days that means founding a startup, training models, and shipping web apps, usually a few at once, and running almost entirely on chai.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}

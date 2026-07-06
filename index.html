@@ -75,6 +75,18 @@
                           linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
       }
       .mask-fade-x { -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+
+      /* ---------- Mobile refinements (max-width only; desktop untouched) ---------- */
+      @media (max-width: 640px) {
+        /* Tighter vertical rhythm for content sections (hero keeps its nav clearance) */
+        section:not(#about) { padding-top: 2.75rem !important; padding-bottom: 2.75rem !important; }
+        /* Softer, cheaper aurora blur on phones (perf + less banding) */
+        .grid-bg { background-size: 38px 38px; }
+      }
+      @media (max-width: 400px) {
+        /* Give the largest display type a touch more room on very small phones */
+        h1.font-display, h2.font-display { letter-spacing: -0.01em; }
+      }
     </style>
   <script type="importmap">
 {

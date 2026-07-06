@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import SkillsList from './components/SkillsList';
 import Footer from './components/Footer';
-import { Cursor, Aurora } from './components/effects';
+import { Aurora } from './components/effects';
 
 const App: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
@@ -17,7 +17,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen font-sans selection:bg-zen-lime selection:text-zen-black text-zen-black dark:text-white transition-colors duration-300">
-      <Cursor />
       <Aurora />
       <Navbar isDark={isDark} toggleTheme={() => setIsDark(!isDark)} />
 

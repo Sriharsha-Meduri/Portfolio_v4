@@ -6,7 +6,7 @@ import { Magnetic, Counter } from './effects';
 import heroImg from './Hero.jpg';
 import resume from './Resume14.pdf';
 
-const PHRASES = ['deepfakes.', 'phishing nets.', 'vision models.', 'real products.'];
+const PHRASES = ['deepfake radar.', 'vision models.', 'secure systems.', 'real products.'];
 
 const Hero: React.FC = () => {
   // typewriter
@@ -66,8 +66,8 @@ const Hero: React.FC = () => {
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed">
-            I'm <strong className="text-zen-black dark:text-white">Sriharsha Meduri</strong>. I turn ML research into products people actually use.
-            Currently <span className="font-medium text-zen-black dark:text-white">Head of Engineering @ OviGuide</span>, and a GATE-qualified IT undergrad at Andhra University.
+            I'm <strong className="text-zen-black dark:text-white">Sriharsha</strong>, a builder happiest in the gap between a research paper and something people can actually click.
+            Lately that has meant founding a startup, training models, and shipping web apps, occasionally all in the same week. Fueled by curiosity and an unreasonable amount of chai.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}
@@ -105,8 +105,6 @@ const Hero: React.FC = () => {
                 <div className="font-mono text-[10px] leading-relaxed">
                   <p className="text-gray-500">$ whoami</p>
                   <p className="text-zen-lime">sriharsha : ml + full-stack</p>
-                  <p className="text-gray-500 mt-1">$ status</p>
-                  <p className="text-blue-400">3 products live in prod ✓</p>
                 </div>
               </div>
             </div>

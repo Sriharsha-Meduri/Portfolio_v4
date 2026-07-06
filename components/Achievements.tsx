@@ -12,7 +12,7 @@ const items = [
     desc: 'Took first place building a real-time phishing-detection browser extension - the seed that later grew into PhishingLens, my multi-modal detection system.',
   },
   {
-    span: 'md:col-span-1', icon: Plane, date: 'Switzerland', accent: 'bg-blue-500',
+    span: 'md:col-span-1', icon: Plane, date: 'Switzerland', accent: 'bg-sky-500',
     title: 'Research @ USI, Switzerland',
     org: 'Under Prof. Paolo Tonella',
     desc: 'Selected for a summer research internship at Università della Svizzera italiana (USI) under the Director of the Software Institute.',
@@ -24,13 +24,13 @@ const items = [
     desc: 'Cleared GATE 2026 with an All India Rank of ~17,000 among over a million candidates nationwide.',
   },
   {
-    span: 'md:col-span-1', icon: Anchor, date: 'BITS Pilani', accent: 'bg-orange-500',
+    span: 'md:col-span-1', icon: Anchor, date: 'BITS Pilani', accent: 'bg-teal-500',
     title: 'Round 2 - DP World Hackathon 2026',
     org: 'BITS Pilani',
     desc: 'Advanced to round 2 with the container-damage detection idea that became Corten.',
   },
   {
-    span: 'md:col-span-1', icon: BrainCircuit, date: '2025', accent: 'bg-pink-500',
+    span: 'md:col-span-1', icon: BrainCircuit, date: '2025', accent: 'bg-indigo-500',
     title: 'Round 3 - MumbaiHacks 2025',
     org: "World's largest Agentic AI hackathon",
     desc: 'Reached round 3 in the Misinformation track - the space that inspired Provenance, my video-forensics system.',

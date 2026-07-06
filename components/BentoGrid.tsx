@@ -11,7 +11,7 @@ const roles = [
     tags: ['AI', 'Full-stack', 'Product'],
   },
   {
-    icon: Fingerprint, role: 'CTO & Co-Founder', company: 'QuickPe', date: '2026 - Present', present: true, accent: 'text-white bg-blue-600',
+    icon: Fingerprint, role: 'CTO & Co-Founder', company: 'QuickPe', date: '2026 - Present', present: true, accent: 'text-white bg-emerald-600',
     desc: 'Co-founded a fintech reimagining digital payments with biometric auth and offline-first transactions. Owned the security core: ECDSA P-256 signing, hardware-backed key management, and fraud detection.',
     tags: ['Fintech', 'Cryptography', 'System design'],
   },
@@ -21,17 +21,17 @@ const roles = [
     tags: ['GenAI', 'Diffusion', 'TTS'],
   },
   {
-    icon: ScanEye, role: 'Machine Learning Intern', company: 'iMerit Technology', date: '2025 - 2026', present: false, accent: 'text-white bg-orange-500',
+    icon: ScanEye, role: 'Machine Learning Intern', company: 'iMerit Technology', date: '2025 - 2026', present: false, accent: 'text-white bg-teal-600',
     desc: 'Built a post-hoc out-of-distribution detection pipeline (MSP, ODIN, Energy-score) for semantic segmentation in autonomous driving, evaluated on KITTI, Fishyscapes, and nuScenes.',
     tags: ['OOD', 'Computer Vision', 'PyTorch'],
   },
   {
-    icon: FlaskConical, role: 'Research Intern, ML', company: 'IIM Shillong', date: '2025 - Present', present: true, accent: 'text-white bg-emerald-600',
+    icon: FlaskConical, role: 'Research Intern, ML', company: 'IIM Shillong', date: '2025 - Present', present: true, accent: 'text-white bg-sky-600',
     desc: 'Domain-adapted BiLSTM + GloVe on 162K CFPB complaints at 88.1% accuracy, matching a fine-tuned DistilBERT at a fraction of the cost. First-author paper submitted to Decision Support Systems (Elsevier, Q1).',
     tags: ['NLP', 'Research', 'PyTorch'],
   },
   {
-    icon: Code2, role: 'Full Stack Developer Intern', company: 'InsightKnox', date: '2025 - 2026', present: false, accent: 'text-white bg-pink-600',
+    icon: Code2, role: 'Full Stack Developer Intern', company: 'InsightKnox', date: '2025 - 2026', present: false, accent: 'text-white bg-indigo-600',
     desc: 'Maintained and redesigned the company website end to end: UI/UX improvements, feature work, frontend and backend logic, plus performance and security optimization.',
     tags: ['React', 'Full-stack', 'Web'],
   },

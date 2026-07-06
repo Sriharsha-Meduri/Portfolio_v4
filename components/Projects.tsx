@@ -14,7 +14,7 @@ const projects = [
     github: 'https://github.com/Sriharsha-Meduri/PhishingLens', demo: 'https://sriharshameduri-phishinglens.static.hf.space',
   },
   {
-    key: 'corten', icon: Boxes, accent: 'from-orange-400/20 to-transparent',
+    key: 'corten', icon: Boxes, accent: 'from-sky-400/20 to-transparent',
     name: 'Corten', tag: 'Real-time container-damage detection',
     desc: 'Fine-tuned YOLO spots holes, dents, rust and warped frames on shipping containers from an image, a video, or a live camera feed, served through a hand-rolled ONNX Runtime pipeline lean enough to run on a free 512MB host.',
     metric: '98.7%', metricLabel: 'detection mAP',

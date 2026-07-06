@@ -3,59 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sriharsha Meduri | ML Engineer & Web Developer</title>
+    <title>Sriharsha Meduri — ML Engineer & Builder</title>
+    <meta name="description" content="Sriharsha Meduri - ML engineer and full-stack developer. I build production AI that actually ships: phishing detection, video forensics, computer vision, and the web apps around them." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              'zen-black': '#191314',
+              'zen-black': '#141313',
               'zen-lime': '#ecf95a',
               'zen-bg': '#f0f2eb',
               'zen-gray': '#e5e5e5',
-              'zen-dark-card': '#1f1f1f',
+              'zen-dark-card': '#1c1c1b',
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'Inter', 'sans-serif'],
+              serif: ['Instrument Serif', 'Georgia', 'serif'],
               mono: ['Space Mono', 'monospace'],
             },
-            borderRadius: {
-              '4xl': '2.5rem',
-            }
+            borderRadius: { '4xl': '2.5rem' },
+            keyframes: {
+              marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+              aurora1: { '0%,100%': { transform: 'translate(0,0) scale(1)' }, '50%': { transform: 'translate(8%,6%) scale(1.15)' } },
+              aurora2: { '0%,100%': { transform: 'translate(0,0) scale(1.1)' }, '50%': { transform: 'translate(-6%,-8%) scale(1)' } },
+              shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+              floaty: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+            },
+            animation: {
+              marquee: 'marquee 28s linear infinite',
+              aurora1: 'aurora1 18s ease-in-out infinite',
+              aurora2: 'aurora2 22s ease-in-out infinite',
+              shimmer: 'shimmer 3s linear infinite',
+              floaty: 'floaty 6s ease-in-out infinite',
+            },
           }
         }
       }
     </script>
     <style>
-      body {
-        background-color: #f0f2eb;
+      body { background-color: #f0f2eb; overflow-x: hidden; }
+      html.dark body { background-color: #141313; color: #f0f2eb; }
+
+      /* Custom cursor: hide the native one on fine-pointer devices */
+      @media (pointer: fine) {
+        * { cursor: none !important; }
       }
-      html.dark body {
-        background-color: #191314;
-        color: #f0f2eb;
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+      html.dark ::-webkit-scrollbar-thumb { background: #444; }
+      ::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+      .gradient-text {
+        background: linear-gradient(100deg, #141313 0%, #6b7280 55%, #141313 100%);
+        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
       }
-      /* Custom scrollbar for webkit */
-      ::-webkit-scrollbar {
-        width: 8px;
+      html.dark .gradient-text {
+        background: linear-gradient(100deg, #ffffff 0%, #ecf95a 55%, #ffffff 100%);
+        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
       }
-      ::-webkit-scrollbar-track {
-        background: transparent;
+      .grid-bg {
+        background-image: linear-gradient(rgba(20,19,19,.04) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(20,19,19,.04) 1px, transparent 1px);
+        background-size: 48px 48px;
       }
-      ::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
+      html.dark .grid-bg {
+        background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
       }
-      html.dark ::-webkit-scrollbar-thumb {
-        background: #444;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #aaa;
-      }
+      .mask-fade-x { -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
     </style>
   <script type="importmap">
 {
@@ -68,7 +92,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>

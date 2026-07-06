@@ -1,89 +1,78 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import Button from './Button';
+import { Magnetic } from './effects';
 
-interface NavbarProps {
-  isDark: boolean;
-  toggleTheme: () => void;
-}
+interface NavbarProps { isDark: boolean; toggleTheme: () => void; }
+
+const navLinks = [
+  { name: 'About', href: '#about' },
+  { name: 'Work', href: '#work' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Milestones', href: '#achievements' },
+  { name: 'Skills', href: '#skills' },
+];
 
 const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [active, setActive] = useState('about');
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.3 });
 
-  const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Achievements', href: '#blog' },
-    { name: 'Skills', href: '#skills' },
-  ];
+  useEffect(() => {
+    const ids = navLinks.map((l) => l.href.slice(1));
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); }),
+      { rootMargin: '-45% 0px -50% 0px' }
+    );
+    ids.forEach((id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+    return () => obs.disconnect();
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-zen-bg/80 dark:bg-zen-black/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
-      <div className="w-full max-w-[90%] lg:max-w-[80%] mx-auto px-4 lg:px-0 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-zen-black dark:bg-zen-lime rounded-lg flex items-center justify-center transition-colors">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-zen-bg/70 dark:bg-zen-black/70 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-800/50 transition-colors">
+      <motion.div style={{ scaleX: progress }} className="absolute bottom-0 left-0 right-0 h-[2px] bg-zen-lime origin-left" />
+      <div className="w-full max-w-[90%] lg:max-w-[80%] mx-auto px-4 lg:px-0 py-3.5 flex items-center justify-between">
+        <a href="#about" className="flex items-center gap-2">
+          <div className="w-8 h-8 bg-zen-black dark:bg-zen-lime rounded-lg flex items-center justify-center">
             <span className="text-zen-lime dark:text-zen-black font-bold font-mono">S</span>
           </div>
-          <span className="font-bold text-lg hidden sm:block text-zen-black dark:text-white">Sriharsha</span>
+          <span className="font-display font-bold text-lg hidden sm:block text-zen-black dark:text-white">Sriharsha</span>
+        </a>
+
+        <div className="hidden md:flex items-center gap-1 text-sm font-medium">
+          {navLinks.map((link) => {
+            const isActive = active === link.href.slice(1);
+            return (
+              <a key={link.name} href={link.href}
+                className={`relative px-3 py-1.5 rounded-full transition-colors ${isActive ? 'text-zen-black dark:text-zen-lime' : 'text-gray-500 dark:text-gray-400 hover:text-zen-black dark:hover:text-white'}`}>
+                {isActive && <motion.span layoutId="nav-pill" className="absolute inset-0 rounded-full bg-zen-black/5 dark:bg-white/10 -z-10" transition={{ type: 'spring', stiffness: 380, damping: 30 }} />}
+                {link.name}
+              </a>
+            );
+          })}
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zen-black dark:text-gray-300">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href} 
-              className="hover:text-gray-600 dark:hover:text-white transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-4">
-          <button 
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-zen-black dark:text-white"
-            aria-label="Toggle Dark Mode"
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+        <div className="flex items-center gap-3">
+          <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-zen-black dark:text-white" aria-label="Toggle theme">
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-          
           <div className="hidden md:block">
-            <Button variant="primary" className="!py-2 !px-4 !rounded-lg text-xs" href="mailto:sriharshameduri07@gmail.com">
-              Get in Touch
-            </Button>
+            <Magnetic><Button variant="primary" className="!py-2 !px-4 !rounded-lg text-xs" href="mailto:sriharshameduri07@gmail.com">Get in touch</Button></Magnetic>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-2 text-zen-black dark:text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden p-2 text-zen-black dark:text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-zen-black border-b border-gray-200 dark:border-gray-800 py-6 px-4 space-y-4 shadow-xl animate-in fade-in slide-in-from-top-5 duration-300">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-zen-black border-b border-gray-200 dark:border-gray-800 py-6 px-6 space-y-3 shadow-xl">
           {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href} 
-              className="block text-lg font-medium text-zen-black dark:text-gray-300 hover:text-zen-lime transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </a>
+            <a key={link.name} href={link.href} onClick={() => setIsMenuOpen(false)} className="block text-lg font-medium text-zen-black dark:text-gray-300 hover:text-zen-lime transition-colors">{link.name}</a>
           ))}
-          <div className="pt-4">
-            <Button variant="primary" className="w-full" href="mailto:sriharshameduri07@gmail.com">
-              Get in Touch
-            </Button>
-          </div>
+          <div className="pt-3"><Button variant="primary" className="w-full" href="mailto:sriharshameduri07@gmail.com">Get in touch</Button></div>
         </div>
       )}
     </nav>

@@ -24,7 +24,7 @@ const BentoGrid: React.FC = () => {
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-1 text-zen-black">Head of Engineering</h3>
-              <p className="font-mono text-sm mb-4 text-zen-black/70">OviGuide · 2026 — Present</p>
+              <p className="font-mono text-sm mb-4 text-zen-black/70">OviGuide · 2026 - Present</p>
               <p className="text-sm leading-relaxed text-zen-black/80">
                 Leading an AI counselling co-pilot for engineering admissions. Built an admission-prediction engine spanning 50,000+ college-branch combinations (JoSAA, Comedk, MHT-CET, EAPCET).
               </p>
@@ -41,10 +41,10 @@ const BentoGrid: React.FC = () => {
           <motion.div whileHover={{ y: -5 }} className="h-full bg-white dark:bg-zen-dark-card rounded-3xl p-8 flex flex-col justify-between min-h-[340px] shadow-sm border border-gray-100 dark:border-gray-800">
             <div className="bg-gray-100 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center"><FlaskConical className="w-6 h-6 text-zen-black dark:text-white" /></div>
             <div>
-              <h3 className="text-xl font-bold mb-1 text-zen-black dark:text-white">Research Intern — ML</h3>
-              <p className="font-mono text-sm mb-4 text-gray-500 dark:text-gray-400">IIM Shillong · 2025 — Present</p>
+              <h3 className="text-xl font-bold mb-1 text-zen-black dark:text-white">Research Intern - ML</h3>
+              <p className="font-mono text-sm mb-4 text-gray-500 dark:text-gray-400">IIM Shillong · 2025 - Present</p>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                Domain-adapted BiLSTM + GloVe on 162K CFPB complaints, hitting 88.1% accuracy — within 0.7 pts of a fine-tuned DistilBERT at 12-60x lower cost. First-author paper submitted to <em>Decision Support Systems</em> (Elsevier, Q1).
+                Domain-adapted BiLSTM + GloVe on 162K CFPB complaints, hitting 88.1% accuracy - within 0.7 pts of a fine-tuned DistilBERT at 12-60x lower cost. First-author paper submitted to <em>Decision Support Systems</em> (Elsevier, Q1).
               </p>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
@@ -59,9 +59,9 @@ const BentoGrid: React.FC = () => {
             <div className="bg-gray-100 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center"><ScanEye className="w-6 h-6 text-zen-black dark:text-white" /></div>
             <div>
               <h3 className="text-xl font-bold mb-1 text-zen-black dark:text-white">ML Intern</h3>
-              <p className="font-mono text-sm mb-4 text-gray-500 dark:text-gray-400">iMerit Technology · 2025 — 2026</p>
+              <p className="font-mono text-sm mb-4 text-gray-500 dark:text-gray-400">iMerit Technology · 2025 - 2026</p>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                Built a post-hoc out-of-distribution detection pipeline (MSP, ODIN, Energy-score) for semantic segmentation in autonomous driving — evaluated on KITTI, Fishyscapes, and nuScenes.
+                Built a post-hoc out-of-distribution detection pipeline (MSP, ODIN, Energy-score) for semantic segmentation in autonomous driving - evaluated on KITTI, Fishyscapes, and nuScenes.
               </p>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
@@ -84,7 +84,7 @@ const BentoGrid: React.FC = () => {
             <div className="text-left md:text-right">
               <p className="text-4xl font-mono font-bold text-zen-lime">8.0</p>
               <p className="text-sm text-gray-400 uppercase tracking-widest">CGPA / 10</p>
-              <p className="text-xs text-gray-500 mt-1">2023 — 2027</p>
+              <p className="text-xs text-gray-500 mt-1">2023 - 2027</p>
             </div>
           </motion.div>
         </Reveal>

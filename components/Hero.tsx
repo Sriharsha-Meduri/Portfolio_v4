@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed">
-            I'm <strong className="text-zen-black dark:text-white">Sriharsha Meduri</strong> — I turn ML research into products people actually use.
+            I'm <strong className="text-zen-black dark:text-white">Sriharsha Meduri</strong> - I turn ML research into products people actually use.
             Currently <span className="font-medium text-zen-black dark:text-white">Head of Engineering @ OviGuide</span>, and a GATE-qualified IT undergrad at Andhra University.
           </motion.p>
 
@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="font-mono text-[10px] leading-relaxed">
                 <p className="text-gray-500">$ whoami</p>
-                <p className="text-zen-lime">sriharsha — ml + full-stack</p>
+                <p className="text-zen-lime">sriharsha - ml + full-stack</p>
                 <p className="text-gray-500 mt-1">$ status</p>
                 <p className="text-blue-400">3 products live in prod ✓</p>
               </div>

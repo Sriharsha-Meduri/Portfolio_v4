@@ -8,7 +8,7 @@ const projects = [
   {
     key: 'corten', icon: Boxes, accent: 'from-orange-400/20 to-transparent', dot: 'bg-orange-400',
     name: 'Corten', tag: 'Real-time container-damage detection',
-    desc: 'Fine-tuned YOLO spots holes, dents, rust and warped frames on shipping containers from an image, a video, or a live camera feed — served through a hand-rolled ONNX Runtime pipeline lean enough to run on a free 512MB host.',
+    desc: 'Fine-tuned YOLO spots holes, dents, rust and warped frames on shipping containers from an image, a video, or a live camera feed - served through a hand-rolled ONNX Runtime pipeline lean enough to run on a free 512MB host.',
     metric: '98.7%', metricLabel: 'detection mAP',
     tech: ['YOLO', 'ONNX Runtime', 'FastAPI', 'OpenCV', 'React'],
     github: 'https://github.com/Sriharsha-Meduri/Corten', demo: 'https://cortenai.vercel.app/',
@@ -16,7 +16,7 @@ const projects = [
   {
     key: 'provenance', icon: Fingerprint, accent: 'from-violet-400/20 to-transparent', dot: 'bg-violet-400',
     name: 'Provenance', tag: 'Multi-modal video forensics',
-    desc: 'Can you trust this video? Three independent detectors flag deepfakes, fully AI-generated footage, and miscontextualized clips — each returning an explainable risk score instead of a black-box verdict.',
+    desc: 'Can you trust this video? Three independent detectors flag deepfakes, fully AI-generated footage, and miscontextualized clips - each returning an explainable risk score instead of a black-box verdict.',
     metric: '99.7%', metricLabel: 'on known deepfakes',
     tech: ['ViT', 'CLIP', 'ResNet-50', 'FastAPI', 'Docker'],
     github: 'https://github.com/Sriharsha-Meduri/Provenance', demo: 'https://theprovenance.vercel.app/',
@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
       <Reveal>
         <Badge variant="lime">Selected work</Badge>
         <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 text-zen-black dark:text-white">Built, shipped, and live.</h2>
-        <p className="text-gray-600 dark:text-gray-400 mt-3 max-w-xl">Not notebook demos — real systems with APIs, front-ends, and browser extensions you can use right now.</p>
+        <p className="text-gray-600 dark:text-gray-400 mt-3 max-w-xl">Not notebook demos - real systems with APIs, front-ends, and browser extensions you can use right now.</p>
       </Reveal>
 
       {/* Featured: PhishingLens */}
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
               </div>
               <p className="text-lg text-gray-500 dark:text-gray-300">Multi-modal phishing detection</p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Catches phishing across the surfaces people actually get hit on — <strong className="text-zen-black dark:text-white">email, SMS, URLs, and screenshots</strong>.
+                Catches phishing across the surfaces people actually get hit on - <strong className="text-zen-black dark:text-white">email, SMS, URLs, and screenshots</strong>.
                 A fine-tuned DistilBERT reads the language, a lexical engine dissects links, and Tesseract OCR reads images. One explainable API powering a web app and a Chrome extension.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

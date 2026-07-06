@@ -12,9 +12,9 @@ const skillGroups: SkillGroup[] = [
 ];
 
 const competencies = [
-  'I turn ML research into deployed products — APIs, front-ends, and browser extensions people actually use.',
+  'I turn ML research into deployed products - APIs, front-ends, and browser extensions people actually use.',
   'Comfortable across the whole stack: a PyTorch model one day, a React + Tailwind interface the next.',
-  'Obsessed with shipping — honest metrics, explainable outputs, and real deploys that fit free tiers.',
+  'Obsessed with shipping - honest metrics, explainable outputs, and real deploys that fit free tiers.',
 ];
 
 const marqueeTech = ['Python', 'PyTorch', 'DistilBERT', 'FastAPI', 'React', 'TypeScript', 'ONNX', 'OpenCV', 'CLIP', 'YOLO', 'Docker', 'Tailwind', 'Vite', 'Hugging Face', 'Framer Motion'];
@@ -27,7 +27,7 @@ const SkillsList: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
         <Reveal>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 text-zen-black dark:text-white">Technical arsenal</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md">The toolkit behind everything above — full-stack, ML, and the ops to ship it.</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md">The toolkit behind everything above - full-stack, ML, and the ops to ship it.</p>
           <div className="space-y-5">
             <h3 className="font-mono text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">How I work</h3>
             {competencies.map((c, i) => (

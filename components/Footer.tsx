@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               <h2 className="font-display text-4xl md:text-6xl font-bold leading-tight max-w-3xl">
                 Let's build something <span className="italic font-serif text-zen-lime">people actually use.</span>
               </h2>
-              <p className="text-gray-400 mt-5 max-w-xl">Internships, research, a wild project idea, or just to talk ML and security — my inbox is open.</p>
+              <p className="text-gray-400 mt-5 max-w-xl">Internships, research, a wild project idea, or just to talk ML and security - my inbox is open.</p>
               <div className="flex flex-wrap items-center gap-4 mt-8">
                 <Magnetic>
                   <a href="mailto:sriharshameduri07@gmail.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-zen-lime text-zen-black font-mono font-bold hover:brightness-105 transition">

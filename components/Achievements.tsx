@@ -7,9 +7,9 @@ import { Reveal } from './effects';
 const items = [
   {
     span: 'md:col-span-2', featured: true, icon: Trophy, date: 'National', accent: 'bg-zen-lime',
-    title: 'Winner — National Cybersecurity Hackathon',
+    title: 'Winner - National Cybersecurity Hackathon',
     org: 'Organised by the Ministry of Electronics & IT (MeitY)',
-    desc: 'Took first place building a real-time phishing-detection browser extension — the seed that later grew into PhishingLens, my multi-modal detection system.',
+    desc: 'Took first place building a real-time phishing-detection browser extension - the seed that later grew into PhishingLens, my multi-modal detection system.',
   },
   {
     span: 'md:col-span-1', icon: Plane, date: 'Switzerland', accent: 'bg-blue-500',
@@ -25,15 +25,15 @@ const items = [
   },
   {
     span: 'md:col-span-1', icon: Anchor, date: 'BITS Pilani', accent: 'bg-orange-500',
-    title: 'Round 2 — DP World Hackathon 2026',
+    title: 'Round 2 - DP World Hackathon 2026',
     org: 'BITS Pilani',
     desc: 'Advanced to round 2 with the container-damage detection idea that became Corten.',
   },
   {
     span: 'md:col-span-1', icon: BrainCircuit, date: '2025', accent: 'bg-pink-500',
-    title: 'Round 3 — MumbaiHacks 2025',
+    title: 'Round 3 - MumbaiHacks 2025',
     org: "World's largest Agentic AI hackathon",
-    desc: 'Reached round 3 in the Misinformation track — the space that inspired Provenance, my video-forensics system.',
+    desc: 'Reached round 3 in the Misinformation track - the space that inspired Provenance, my video-forensics system.',
   },
 ];
 

@@ -44,10 +44,10 @@ export const Cursor: React.FC = () => {
 /* ------------------------------------------------------------------ */
 export const Aurora: React.FC = () => (
   <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-    <div className="absolute inset-0 grid-bg opacity-60" />
-    <div className="absolute -top-40 -left-32 h-[44rem] w-[44rem] rounded-full bg-zen-lime/30 dark:bg-zen-lime/[0.13] blur-[150px] animate-aurora1" />
-    <div className="absolute top-1/4 -right-40 h-[42rem] w-[42rem] rounded-full bg-teal-300/25 dark:bg-teal-500/[0.11] blur-[150px] animate-aurora2" />
-    <div className="absolute bottom-[-12rem] left-1/3 h-[36rem] w-[36rem] rounded-full bg-sky-300/20 dark:bg-indigo-500/[0.10] blur-[150px] animate-aurora1" style={{ animationDelay: '6s' }} />
+    <div className="absolute inset-0 grid-bg opacity-50 md:opacity-60" />
+    <div className="absolute -top-24 -left-20 h-[20rem] w-[20rem] md:h-[44rem] md:w-[44rem] rounded-full bg-zen-lime/[0.12] md:bg-zen-lime/30 dark:bg-zen-lime/[0.09] md:dark:bg-zen-lime/[0.13] blur-[80px] md:blur-[150px] animate-aurora1" />
+    <div className="absolute top-1/3 -right-24 h-[18rem] w-[18rem] md:h-[42rem] md:w-[42rem] rounded-full bg-teal-300/[0.11] md:bg-teal-300/25 dark:bg-teal-500/[0.08] md:dark:bg-teal-500/[0.11] blur-[80px] md:blur-[150px] animate-aurora2" />
+    <div className="absolute bottom-[-6rem] left-1/4 h-[16rem] w-[16rem] md:h-[36rem] md:w-[36rem] rounded-full bg-sky-300/[0.10] md:bg-sky-300/20 dark:bg-indigo-500/[0.07] md:dark:bg-indigo-500/[0.10] blur-[80px] md:blur-[150px] animate-aurora1" style={{ animationDelay: '6s' }} />
   </div>
 );
 
